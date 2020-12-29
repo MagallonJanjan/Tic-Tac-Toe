@@ -30,7 +30,7 @@
         for(var i = 0; i < boxes.length; i++) {
             boxes[i].addEventListener('click', clickHandler, false);
         }
-        
+
         resetGame.addEventListener('click', resetGameHandler, false);
     }
     
@@ -93,6 +93,7 @@
             
             // if all boxes are full - Draw!!!
             if(used_boxes == 9) {
+                document.getElementById('nfo').style.display = "none"
                 gameDraw();
             }
         }
@@ -118,6 +119,7 @@
     }
     // Reset game to play again
     var resetGameHandler = function() {
+        document.getElementById('nfo').style.display = "block"
         clearEvents();
         init();
         
